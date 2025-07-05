@@ -1,0 +1,64 @@
+
+/* Paleta de cores */
+:root {
+  --bg-color: #f4f6f8;
+  --primary-color: #0077b6;
+  --accent-color: #00b4d8;
+  --text-color: #333;
+  --section-bg: #ffffff;
+  --border-color: #ccc;
+}
+
+/* Container com scroll snapping */
+.container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* Cada seção ocupa a tela inteira */
+.section {
+  scroll-snap-align: start;
+  height: 100vh;
+  padding: 2rem;
+  background-color: var(--section-bg);
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Estilo geral */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Inputs e checkboxes */
+input[type="text"],
+input[type="date"],
+input[type="checkbox"] {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+/* Botões */
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+}

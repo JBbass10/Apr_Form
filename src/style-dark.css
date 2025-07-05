@@ -1,0 +1,76 @@
+
+:root {
+  --bg-color: #121212;
+  --primary-color: #bb86fc;
+  --accent-color: #03dac6;
+  --text-color: #e0e0e0;
+  --section-bg: #1e1e1e;
+  --border-color: #333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.section {
+  scroll-snap-align: start;
+  height: 100vh;
+  padding: 2rem;
+  background-color: var(--section-bg);
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="checkbox"],
+textarea {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: #333;
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+}
+
+label {
+  color: var(--text-color);
+}
+
+h2, h3 {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 1rem;
+  }
+}
